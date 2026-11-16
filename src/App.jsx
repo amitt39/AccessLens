@@ -1,25 +1,16 @@
-import Navbar from "../src/components/layout/Navbar";
-import Hero from "../src/components/Hero";
-import HowItWorks from "./components/HowItWorks";
-import WhatWeCheck from "./components/sections/WhatWeCheck";
-import WhyChooseUs from "./components/sections/WhyChooseUs";
-import Faq from "./components/sections/Faq";
-import Footer from "./components/sections/Footer";
+import Home from "./pages/Home";
+import { Routes, Route } from "react-router";
+import Scan from "./pages/Scan";
+import Results from "./pages/Results";
 
 export default function App() {
   return (
     <>
-      <Navbar />
-      <div id="home">
-        <Hero />
-      </div>
-      <div id="how-it-works">
-        <HowItWorks />
-      </div>
-      <WhatWeCheck />
-      <WhyChooseUs />
-      <Faq />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/scan" element={<Scan />} />
+        <Route path="/results" element={<Results />} />
+      </Routes>
     </>
   );
 }
